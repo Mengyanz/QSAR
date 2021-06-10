@@ -348,7 +348,7 @@ def plot_hist(sample_dict):
                 para_list += list(a.split(','))
              
         for i, samples in enumerate(value):
-            sns.distplot(samples, ax = f, label = arm_name_dict[i], bins = 100, norm_hist=False) 
+            sns.distplot(samples, ax = f, label = arm_name_dict[i], kde = False, bins = 200, norm_hist=True) 
 
         plt.xlim([-1, 20])
         plt.ylim([0,0.5])
